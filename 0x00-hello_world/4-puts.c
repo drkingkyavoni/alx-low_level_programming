@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 
+/* This code solves the challenge */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
