@@ -1,14 +1,11 @@
-/**
- * This code prints the size of various 
- * types on the computer it is compile and run on
- * Author: Ibrahim Kyuka Avong
- * Creation Date: February 16, 2023
- *
- */
-
 #include <stdio.h>
 
-/* This code solves the challenge */
+/**
+ * main - Entry point
+ *
+ * Return: Always return 0 as Success
+ */
+
 int main(void)
 {
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
