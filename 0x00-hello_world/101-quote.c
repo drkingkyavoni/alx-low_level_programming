@@ -1,15 +1,13 @@
-/*
- * This code prints a message followed by a new line to the standard error
- * Author: Ibrahim Kyuka Avong
- * Creation Date: February 16, 2023
+#include <unistd.h>
+
+/**
+ * main - Entry point
  *
+ * Return: Return 1
  */
 
-#include <iostream.h>
-
-/* This code solves the challenge */
 int main(void)
 {
-	cout << "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	write(1,"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",60);
 	return (1);
 }
