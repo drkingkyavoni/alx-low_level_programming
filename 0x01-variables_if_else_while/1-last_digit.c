@@ -22,7 +22,7 @@ int main(void)
 	if (last_n > 5)
 		printf("%s %d is %d and is greater than 5\n", message, n, last_n);
 	else if (last_n == 0)
-		printf("%s %d is %d and is zero\n", message, n, last_n);
+		printf("%s %d is %d and is 0\n", message, n, last_n);
 	else if (last_n < 6 && last_n != 0)
 		printf("%s %d is %d and is less than 6 and not 0\n", message, n, last_n);
 
