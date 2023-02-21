@@ -12,10 +12,10 @@ int print_last_digit(int n)
 {
 	int neg_result = 0;
 	int result = n % 10;
-	_putchar(abs(result)+'0');
+
+	_putchar(abs(result) + '0');
 
 	if (result < 0)
 		neg_result = 4;
-	
-	return neg_result;
+	return (neg_result);
 }
