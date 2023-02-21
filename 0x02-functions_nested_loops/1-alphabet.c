@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet functions prints 'a' to 'z'
+ * print_alphabet - prints 'a' to 'z'
  * Description: it takes advantage of the _putchar function
  * Return: it returns no value or void
  */
