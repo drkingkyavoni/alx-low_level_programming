@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number - prints 0 to 9
+ * print_numbers - prints 0 to 9
  * Description: it takes advantage of the _putchar function
  * Return: void
  */
