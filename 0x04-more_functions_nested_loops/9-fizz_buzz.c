@@ -3,7 +3,7 @@
 /**
  * main - prints fizzbuzz
  * Description: it takes advantage of the printf function
- * Return: void
+ * Return: 0 as int
  */
 
 int main(void)
