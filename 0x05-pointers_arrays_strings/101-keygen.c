@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+/*
+   * main - significant entry point
+   * Decsription: print a random password
+   * Return: void
+   */
+
+int main(void)
+{
+	srand(time(NULL));
+	int l = rand() % 8 + 12;
+	int j;
+
+	while (1){
+	for (j = 0; j < l; j++)
+	{
+		int i = rand() % 94 + 33;
+
+		printf("%c", (char)i);
+	}
+	printf("\n");}
+}
