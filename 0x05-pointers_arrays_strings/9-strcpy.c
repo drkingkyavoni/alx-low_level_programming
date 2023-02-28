@@ -12,7 +12,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int slen = strlen(src);
+	int slen = strlen(src) + 1;
 
 	strncpy(dest, src, slen);
 	return (dest);
