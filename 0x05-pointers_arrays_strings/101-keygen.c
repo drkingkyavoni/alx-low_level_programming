@@ -3,23 +3,24 @@
 #include <stdlib.h>
 
 /*
-   * main - significant entry point
-   * Decsription: print a random password
-   * Return: void
-   */
+ * main - significant entry point
+ * Description: print a random password
+ * Return: void
+*/
 
 int main(void)
 {
 	srand(time(NULL));
-	int l = rand() % 8 + 12;
-	int j;
+	int i, l, j;
 
-	while (1){
-	for (j = 0; j < l; j++)
+	while (1)
 	{
-		int i = rand() % 94 + 33;
+		l = rand() % 18 + 2;
+		for (j = 0; j < l; j++)
+		{
+			i = rand() % 94 + 33;
 
-		printf("%c", (char)i);
+			printf("%c", (char)i);
+		}
 	}
-	printf("\n");}
 }
