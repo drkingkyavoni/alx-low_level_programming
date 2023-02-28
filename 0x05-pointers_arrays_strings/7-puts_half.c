@@ -17,7 +17,7 @@ void puts_half(char *s)
 	if (slen % 2 == 0)
 		j = slen / 2;
 	else
-		j = (slen - 2) / 2;
+		j = (slen - 1) / 2;
 
 	for (i = j; i < slen; i++)
 		printf("%c", *(s + i));
