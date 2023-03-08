@@ -7,8 +7,6 @@
  * Return: int
  */
 
-int is_prime_number_check(int, int);
-
 int is_prime_number(int n)
 {
 	if (n <= 1)
@@ -16,6 +14,14 @@ int is_prime_number(int n)
 	else
 		return (is_prime_number_check(n, 2));
 }
+
+/**
+ * is_prime_number_check - helper function for is_prime_number
+ * Description: uses recursion
+ * @num: an int parameter
+ * @count: an int parameter
+ * Return: int
+ */
 
 int is_prime_number_check(int num, int count)
 {
