@@ -155,3 +155,5 @@ char *_strpbrk(char *s, char *accept);
  * Return: char
  */
 char *_strstr(char *haystack, char *needle);
+
+#endif
