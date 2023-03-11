@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#define  NULLED(i) (void)(i)
 /**
  * main - entry point
  * @argc: int pointer array
@@ -9,6 +9,7 @@
 
 int main(int argc, char *argv[])
 {
+	NULLED(argc);
 	printf("%s\n", *argv);
-	return (argc);
+	return (0);
 }
