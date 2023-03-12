@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
 	int total = 0;
 	int i = 1;
 
-	if (argc >= 2)
+	if (argc > 1)
 	{
 		while (i < argc)
 		{
-			char j = *argv[i];
+			char *j = argv[i];
 
-			if (isdigit(j))
+			if (isdigit(*j))
 			{
 				total += atoi(j);
 				i++;
