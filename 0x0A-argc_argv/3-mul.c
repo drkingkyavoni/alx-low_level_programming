@@ -13,7 +13,12 @@ int main(int argc, char *argv[])
 	int total = 1;
 	int i = 1;
 
-	if (argc >= 2)
+	if (argc <= 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
 	{
 		while (i < argc)
 		{
@@ -22,10 +27,5 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", total);
 		return (0);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
 	}
 }
