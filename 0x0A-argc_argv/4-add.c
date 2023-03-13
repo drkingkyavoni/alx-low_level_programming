@@ -21,7 +21,9 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((atoi(argv[i]) == 0) && ((*argv[i] < 45) || (*argv[i] > 57)))
+			if ((atoi(argv[i]) == 0) &&
+				((*argv[i] < 45) ||
+				 (*argv[i] > 57)))
 			{
 				printf("Error\n");
 				return (1);
