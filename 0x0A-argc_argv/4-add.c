@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 	if (argc <= 1)
 	{
 		printf("0\n");
-		return (1);
 	}
 	else
 	{
@@ -31,6 +30,6 @@ int main(int argc, char *argv[])
 			total = total + atoi(argv[i]);
 		}
 		printf("%d\n", total);
-		return (0);
 	}
+	return (0);
 }
