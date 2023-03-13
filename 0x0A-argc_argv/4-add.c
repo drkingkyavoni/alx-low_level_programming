@@ -12,31 +12,25 @@
 int main(int argc, char *argv[])
 {
 	int total = 0;
-	int i = 1;
+	int i;
 
-	if (argc > 1)
+	if (argc <= 1)
 	{
-		while (i < argc)
+		printf("0\n");
+		return (1);
+	}
+	else
+	{
+		for (i = 1; i < argc; i++)
 		{
-			char *j = argv[i];
-
-			if (isdigit(*j))
-			{
-				total += atoi(j);
-				i++;
-			}
-			else
+			if (atoi(argv[i]) == 0)
 			{
 				printf("Error\n");
 				return (1);
 			}
+			total = total + atoi(argv[i]);
 		}
 		printf("%d\n", total);
 		return (0);
-	}
-	else
-	{
-		printf("0\n");
-		return (1);
 	}
 }
