@@ -20,12 +20,18 @@ int **alloc_grid(int width, int height)
 
 	ptr1 = (int **)malloc(height * sizeof(int *));
 	if (ptr1 == NULL)
+	{
+		free(ptr1);
 		return (NULL);
+	}
 	for (i = 0; i < height; i++)
 	{
 		ptr2 = (int *)malloc(width * sizeof(int));
 		if (ptr2 == NULL)
+		{
+			free(ptr2);
 			return (NULL);
+		}
 		ptr1[i] = ptr2;
 	}
 
