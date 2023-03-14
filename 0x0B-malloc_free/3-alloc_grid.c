@@ -11,25 +11,29 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **ptr, i, j;
+	int **ptr1;
+	int *ptr2;
+	int i, j;
 
 	if (width == 0 || height == 0)
 		return (NULL);
 
-	ptr = malloc(height * width * sizeof(int *) + 1);
-	if (ptr == NULL)
+	ptr1 = (int **)malloc(height * sizeof(int *));
+	if (ptr1 == NULL)
 		return (NULL);
-	else
+	for (i = 0; i < height; i++)
 	{
-		for (i = 0; i < width * height; i++)
-			**(ptr + i) = 0;
+		ptr2 = (int *)malloc(width * sizeof(int));
+		if (ptr2 == NULL)
+			return (NULL);
+		ptr1[i] = ptr2;
 	}
 
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
-			printf("%d ", *ptr[i * width + j]);
-		printf("\n");
+			ptr1[i][j] = 0;
 	}
-	return (ptr);
+
+	return (ptr1);
 }
