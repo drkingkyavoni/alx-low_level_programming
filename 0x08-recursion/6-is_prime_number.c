@@ -9,7 +9,7 @@
  */
 int is_prime_number_check(int n, int flag)
 {
-    if (flag > (int) sqrt((double) n))
+    if (flag > (int)(0.5 * (flag + n / flag)))
         return (1);
     if (n % flag == 0)
         return (0);
