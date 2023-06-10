@@ -9,14 +9,16 @@
 */
 int main(int argc, char **argv)
 {
+	int bal, coins;
+
 	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	int bal = atoi(argv[1]);
-	int coins = 0;
+	bal = atoi(argv[1]);
+	coins = 0;
 
 	while (bal)
 	{

@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 	int sum = 1;
 
-	*argv++;
+	argv++;
 	if (argc < 3)
 	{
 		printf("Error\n");
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	while (*argv)
 	{
 		sum *= atoi(*argv);
-		*argv++;
+		argv++;
 	}
 	printf("%d\n", sum);
 	return (sum);
