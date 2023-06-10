@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - entry point
+ * main - its so amazing entry point
  * @argc: int
  * @argv: char pointer
  * Return: int
@@ -30,7 +30,6 @@ int main(int argc, char **argv)
 		sum += i;
 		argv++;
 	}
-
 	printf("%d\n", sum);
 	return (0);
 }
