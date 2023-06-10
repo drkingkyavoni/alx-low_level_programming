@@ -1,4 +1,6 @@
 #include <stdio.h>
+#define NLF(i) (void)(i)
+
 
 /**
  * main - entry point
@@ -8,7 +10,7 @@
 */
 int main(int argc, char **argv)
 {
-	(void) argv;
+	NLF(argv);
 	printf("%d\n", argc);
 	return (0);
 }
