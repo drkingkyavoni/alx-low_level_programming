@@ -1,9 +1,9 @@
 #include <stdio.h>
-#define NLF(i) (void)(i)
+#define NLF(sumo) (void)(sumo)
 
 
 /**
- * main - entry point
+ * main - not every one's entry point
  * @argc: int
  * @argv: char pointer
  * Return: int
