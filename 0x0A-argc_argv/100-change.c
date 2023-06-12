@@ -10,38 +10,28 @@
 int main(int argc, char **argv)
 {
 	int bal, coins;
+	char *lastptr;
 
+	coins = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	bal = atoi(argv[1]);
-	coins = 0;
+	bal = strtol(argv[1], &lastptr, 10);
+	if (lastptr == *argv || *lastptr != '\0' || bal < 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
 	while (bal)
 	{
-		if (bal >= 25)
-		{
-			bal -= 25;
-		}
-		else if (bal >= 10)
-		{
-			bal -= 10;
-		}
-		else if (bal >= 5)
-		{
-			bal -= 5;
-		}
-		else if (bal >= 2)
-		{
-			bal -= 2;
-		}
-		else
-		{
-			bal -= 1;
-		}
+		bal -=  (bal >= 25) ? 25 :
+		(bal >= 10) ? 10 :
+		(bal >= 5) ? 5 :
+		(bal >= 2) ? 2 : 1;
 		coins++;
 		continue;
 	}
