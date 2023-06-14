@@ -3,7 +3,6 @@
 #include "stddef.h"
 #include "stdlib.h"
 
-int **g, i;
 
 /**
 * alloc_grid - create a 2D array of integers
@@ -13,6 +12,7 @@ int **g, i;
 */
 int **alloc_grid(int width, int height)
 {
+	int **g, i;
 
 	if ((width <= 0) || (height <= 0))
 		return (NULL);
