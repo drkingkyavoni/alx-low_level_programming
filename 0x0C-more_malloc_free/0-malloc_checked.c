@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 
 /**
  * malloc_checked - allocates memory
@@ -18,3 +18,4 @@ void *malloc_checked(unsigned int b)
 		exit(98);
 	return (x);
 }
+
