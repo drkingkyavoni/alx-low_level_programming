@@ -9,8 +9,11 @@
 void *malloc_checked(unsigned int b)
 {
 	int *x;
+	
+	if (!b)
+		exit(98);
 
-	x = malloc(sizeof(b));
+	x = malloc(b);
 	if (!x)
 		exit(98);
 	return (x);
