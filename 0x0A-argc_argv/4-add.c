@@ -20,8 +20,8 @@ int main(int argc, char **argv)
 
 	while (*argv)
 	{
-		int i = atoi(*argv);
-
+		int i = strtol(*argv, NULL, 10);
+		printf("=> %d", i);
 		if ((i == 0) && ((**argv < 48) || (**argv > 57)))
 		{
 			printf("Error\n");

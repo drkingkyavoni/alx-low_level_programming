@@ -31,4 +31,28 @@ char *str_concat(char *s1, char *s2);
 * Return: int
 */
 int **alloc_grid(int width, int height);
+
+/**
+* free_grid - setting the grid free 
+* @grid: int pointer
+* @height: int
+* Return: void
+*/
+void free_grid(int **grid, int height);
+
+/**
+* argstostr - concatenates strings 
+* @ac: int
+* @av: char pointer
+* Return: char pointer
+*/
+char *argstostr(int ac, char **av);
+
+/**
+* strtow - split strings into words 
+* @str: char pointer
+* Return: char pointer
+*/
+char **strtow(char *str);
+
 #endif /* _MAIN_H_ */
