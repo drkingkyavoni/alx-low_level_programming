@@ -37,6 +37,7 @@ void print_dog(struct dog *d);
 * @name: char pointer
 * @age: float
 * @owner: char pointer
+* Return: dog_t pointer
 */
 dog_t *new_dog(char *name, float age, char *owner);
 
