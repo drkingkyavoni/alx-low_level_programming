@@ -7,14 +7,11 @@
 */
 void print_dog(struct dog *d)
 {
-	struct dog *adog;
-
-	adog = d;
-	if (adog)
+	if (d)
 	{
-		printf("Name: %s\n", (!adog->name) ? "(nil)" : adog->name);
-		printf("Age: %f\n", (!adog->age) ? 0 : adog->age);
-		printf("Name: %s\n", (!adog->owner) ? "(nil)" : adog->owner);
+		printf("Name: %s\n", (!d->name) ? "(nil)" : d->name);
+		printf("Age: %f\n", d->age);
+		printf("Name: %s\n", (!d->owner) ? "(nil)" : d->owner);
 	}
 }
 
