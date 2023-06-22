@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <ctype.h>
 
 /**
  * sum_them_all - function that returns the sum of all params
@@ -8,16 +9,19 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int sum, i;
+	unsigned int sum, i, arg;
 	va_list plist;
 
-	i = 0, sum  = 0;
-	if (!n)
+	i = 0, sum  = 0, arg = 0;
+	if (n == 0)
 		return (0);
 
 	va_start(plist, n);
 	while (i++ < n)
-		sum += va_arg(plist, int);
+	{
+		arg = va_arg(plist, int);
+		sum += (isdigit(arg)) ? 0 : arg;
+	}
 
 	va_end(plist);
 

@@ -1,8 +1,5 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
-#include <stddef.h>
-#include <stdarg.h>
-#include <stdlib.h>
 
 /**
  * sum_them_all - function that returns the sum of all params
