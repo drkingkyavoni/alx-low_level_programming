@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	number_of_bytes = strtol(argv[1], NULL, 10);
+	number_of_bytes = atoi(argv[1]);
 	if (number_of_bytes < 0)
 	{
 		printf("Error\n");
