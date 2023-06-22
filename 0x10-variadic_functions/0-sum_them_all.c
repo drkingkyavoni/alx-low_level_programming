@@ -20,7 +20,8 @@ int sum_them_all(const unsigned int n, ...)
 	while (i++ < n)
 	{
 		arg = va_arg(plist, int);
-		sum += (isdigit(arg)) ? 0 : arg;
+		if (isdigit)
+			sum += arg;
 	}
 
 	va_end(plist);
