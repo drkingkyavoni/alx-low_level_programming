@@ -20,11 +20,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		while (i++ < n)
 		{
 			printf("%d", va_arg(plist, int));
-			if (i != n)
+			if (i < n)
 				printf("%s", separator);
 		}
-		printf("\n");
 	}
 	va_end(plist);
+	printf("\n");
 }
 
