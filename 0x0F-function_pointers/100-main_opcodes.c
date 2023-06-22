@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
  * printOpcodes - print opcodes of a function pointer
@@ -29,7 +30,6 @@ void printOpcodes(int (*func)(int, char **), int n)
 int main(int argc, char **argv)
 {
 	int number_of_bytes;
-	char *buf;
 
 	if (argc != 2)
 	{
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	number_of_bytes = strtol(argv[1], &buf, 10);
+	number_of_bytes = strtol(argv[1], NULL, 10);
 	if (number_of_bytes < 0)
 	{
 		printf("Error\n");
