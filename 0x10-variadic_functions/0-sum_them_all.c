@@ -9,20 +9,16 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int sum, i, arg;
+	unsigned int sum, i;
 	va_list plist;
 
-	i = 0, sum  = 0, arg = 0;
-	if (n == 0)
+	i = 0, sum  = 0;
+	if (!n)
 		return (0);
 
 	va_start(plist, n);
 	while (i++ < n)
-	{
-		arg = va_arg(plist, int);
-		if (!isdigit(arg))
-			sum += arg;
-	}
+		sum += va_arg(plist, int);
 
 	va_end(plist);
 
