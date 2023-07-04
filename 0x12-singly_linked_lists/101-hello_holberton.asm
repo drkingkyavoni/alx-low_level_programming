@@ -1,15 +1,22 @@
+section .data
+    msg db "Hello, Holberton", 10 	;Note the newline at the end
+
 section .text
-	global main     ;must be declared for linker
-main:               	;tells linker entry point
-	mov edx, len    ;message length
-	mov ecx, msg    ;message to write
-	mov ebx, 1      ;file descriptor (stdout)
-	mov eax, 4      ;system call number (sys_write)
-	int 0x80        ;call kernel
-	mov eax, 1      ;system call number (sys exit)
-	int 0x80        ;call kernel
+global main
+
+main:
+    ; Write system call
+    mov eax, 1        ; System call number for write
+    mov edi, 1        ; File handle 1 is stdout
+    mov rsi, msg      ; Address of string to output
+    mov edx, msg_len  ; Number of bytes
+    syscall           ; Invoke operating system to perform the write
+
+    ; Exit system call
+    mov eax, 60       ; System call number for exit
+    xor edi, edi      ; Exit code 0
+    syscall           ; Invoke operating system to exit
 
 section .data
-	msg db 'Hello, Holberton', 0xa     ;message
-	len equ $ - msg                     ;length of string
+    msg_len equ $ - msg  ; Length of the message
 
