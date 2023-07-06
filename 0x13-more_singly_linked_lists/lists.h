@@ -92,4 +92,13 @@ int sum_listint(listint_t *head);
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 
+/**
+ * delete_nodeint_at_index - function that deletes a new node
+ * @head: listint_t array
+ * @index: unsigned int
+ * Return: int
+ */
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
+
+
 #endif /* MORE_SINGLY_H */
