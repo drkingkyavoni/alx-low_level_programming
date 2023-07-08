@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * binary_to_unit - prints the binary of a number
+ * print_binary - prints the binary of a number
  * @n: unsigned long int
  * Return: void
  */
