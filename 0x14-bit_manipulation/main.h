@@ -3,6 +3,13 @@
 
 
 /**
+ * get_endianness - function that checks the endianness
+ * Return: int
+ */
+
+int get_endianness(void);
+
+/**
   * flip_bits - function to count flipped bits
   * @n: unsigned long int
   * @m: unsigned long int
