@@ -11,12 +11,19 @@ void print_binary(unsigned long int n)
 	if (!n)
 		_putchar('0');
 
-	while (n > 0)
-	{
-		if (!n)
-			break;
-		_putchar((n & 1) ? '1' : '0');
-		n >>= 1;
-	}
+	f(n);
+}
+
+/**
+ * f - prints the binary in reverse
+ * @n: unsigned long int
+ * Return: void
+ */
+void f(unsigned long int n)
+{
+	if (!n)
+		return;
+	f(n >> 1);
+	_putchar((n & 1) ? '1' : '0');
 }
 
