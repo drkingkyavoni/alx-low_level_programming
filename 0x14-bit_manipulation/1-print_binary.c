@@ -11,12 +11,11 @@ void print_binary(unsigned long int n)
 	if (!n)
 	{
 		_putchar('0');
-		_putchar('\n');
 		return;
 	}
 
 	print_n_binary(n);
-	_putchar('\n');
+	_putchar('\0');
 }
 
 /**
