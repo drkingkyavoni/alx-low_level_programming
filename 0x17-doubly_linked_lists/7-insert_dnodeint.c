@@ -1,8 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - function that inserts a new node at a given position
- *
+ * insert_dnodeint_at_index - function that inserts a new node
  * @h: dlistint_t
  * @idx: unsigned int
  * @n: int
