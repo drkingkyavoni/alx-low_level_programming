@@ -3,6 +3,9 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -40,5 +43,14 @@ typedef struct hash_table_s
  * Return: hash_table_t pointer
  */
 hash_table_t *hash_table_create(unsigned long int size);
+
+/**
+ * hash_djb2 - function implementing the djb2 algorithm
+ *
+ * @str: const unsigned char
+ * Return: unsigned long int
+ */
+unsigned long int hash_djb2(const unsigned char *str);
+
 
 #endif /* HASH_TABLES_H */
