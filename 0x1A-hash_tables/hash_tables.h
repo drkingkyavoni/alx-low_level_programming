@@ -3,6 +3,9 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -14,9 +17,9 @@
  */
 typedef struct hash_node_s
 {
-     char *key;
-     char *value;
-     struct hash_node_s *next;
+	char *key;
+	char *value;
+	struct hash_node_s *next;
 } hash_node_t;
 
 /**
@@ -29,8 +32,8 @@ typedef struct hash_node_s
  */
 typedef struct hash_table_s
 {
-     unsigned long int size;
-     hash_node_t **array;
+	unsigned long int size;
+	hash_node_t **array;
 } hash_table_t;
 
 /**
@@ -40,5 +43,57 @@ typedef struct hash_table_s
  * Return: hash_table_t pointer
  */
 hash_table_t *hash_table_create(unsigned long int size);
+
+/**
+ * hash_djb2 - function implementing the djb2 algorithm
+ *
+ * @str: const unsigned char
+ * Return: unsigned long int
+ */
+unsigned long int hash_djb2(const unsigned char *str);
+
+/**
+ * key_index - function that gives you the index of a key
+ *
+ * @key: const unsigned char pointer
+ * @size: unsigned long int
+ * Return: unsigned long int
+ */
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
+/**
+ * hash_table_set - function that adds an element to the hash table
+ *
+ * @ht: hash_table_t
+ * @key: const char pointer
+ * @value: const char pointer
+ * Return: int
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+
+/**
+ * hash_table_get - function that retrieves a value associated with a key
+ *
+ * @ht: const hash_table_t pointer
+ * @key: const char pointer
+ * Return: char pointer
+ */
+char *hash_table_get(const hash_table_t *ht, const char *key);
+
+/**
+ * hash_table_print - function that prints a hash table
+ *
+ * @ht: const hash_table_t *
+ * Return: void
+ */
+void hash_table_print(const hash_table_t *ht);
+
+/**
+ * hash_table_delete - function that deletes a hash table
+ *
+ * @ht: hash_table_t *
+ * Return: void
+ */
+void hash_table_delete(hash_table_t *ht);
 
 #endif /* HASH_TABLES_H */
