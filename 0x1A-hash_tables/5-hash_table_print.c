@@ -12,12 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i, printed;
 	hash_node_t *elem;
 
-<<<<<<< HEAD
-	if (!ht || !ht->array)
-	{
-=======
 	if (!ht || !ht->array) {
->>>>>>> anotherbranch
 		printf("{}\n");
 		return;
 	}
